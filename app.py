@@ -18,8 +18,10 @@ model = load_model('stock_dl_model.h5')
 def index():
     if request.method == 'POST':
         stock = request.form.get('stock')
-        if not stock:
+        if not stock or stock.strip() == '':
             stock = 'BTC-USD'  # Default stock if none is entered
+        else:
+            stock = stock.strip()
         
         # Define the start and end dates for stock data
         start = dt.datetime(2000, 1, 1)
@@ -109,6 +111,7 @@ def index():
 
         # Return the rendered template with charts and dataset
         return render_template('index.html', 
+                               stock_name=stock,
                                plot_path_ema_20_50=ema_chart_path, 
                                plot_path_ema_100_200=ema_chart_path_100_200, 
                                plot_path_prediction=prediction_chart_path, 
