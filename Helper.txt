@@ -1,0 +1,4 @@
+Resources to get Stock Details - yahoo finance web site
+
+
+python app.py
