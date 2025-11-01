@@ -245,7 +245,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name**
 
-- GitHub: [@widushan](https://github.com/yourusername)
+- GitHub: [@widushan](https://github.com/widushan)
 - Email: widushanp@gmail.com
 
 
